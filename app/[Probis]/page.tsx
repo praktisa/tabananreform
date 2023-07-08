@@ -69,7 +69,7 @@ export default function Probis({ params }: { params: { Probis: string } }) {
             </div>
 
             {
-                nilai > 0
+                reveal === true
                     ?
                     <>
                         <div style={

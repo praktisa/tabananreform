@@ -9,10 +9,14 @@ interface Nav__Inter {
 
 export default function Nav({ href, display }: Nav__Inter) {
 
-    const Nilai: any = localStorage.getItem(href) === null
-        ? "0" : localStorage.getItem(href)
+    let Nilai: any = ""
 
-    // console.log("Nilai", Nilai)
+    if (typeof window !== 'undefined') {
+        Nilai = localStorage.getItem(href) === null
+            ? "0" : localStorage.getItem(href)
+    }
+
+
 
     return (
         <>
