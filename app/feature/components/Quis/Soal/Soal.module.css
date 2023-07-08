@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 0.07fr 0.93fr;
     user-select: none;
+    color: #eaeaea;
 }
 
 .no{

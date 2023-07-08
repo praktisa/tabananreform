@@ -3,6 +3,7 @@
     text-align: center;
     display: grid;
     place-content: center;
+    color: #eaeaea;
 }
 
 .container{
@@ -21,8 +22,21 @@
    align-items: center;
 }
 
-.container div:hover{
+
+
+
+@media (prefers-color-scheme: light) {
+    .container div:hover{
+    
+    background:#12121299;
+    
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+   .container div:hover{
    
    background:#eaeaea50;
   
+}
 }
