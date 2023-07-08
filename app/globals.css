@@ -106,4 +106,8 @@ a {
   html {
     color-scheme: dark;
   }
+
+  body{
+    color: #eaeaea;
+  }
 }
