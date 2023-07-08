@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Upload from '../feature/Upload/Upload'
 
-export default function page() {
+export default function Page() {
 
     const [Data, SetData] = useState([])
     const [Load, setLoad] = useState(false)
