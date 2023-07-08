@@ -10,7 +10,7 @@ export default function Upload({ setState }: any) {
         //     let replacethis = ["a. ", "b. ", "c. ", "d. ", "e. "]
         //     for(var i =0; i)
         //     abc.replaceAll("a. ", "")
-        // }
+        // }  
 
         function GabungOpsi(data: string[]) {
             let Returned = []
