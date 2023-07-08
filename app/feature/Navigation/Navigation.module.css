@@ -1,0 +1,28 @@
+.layout{
+   
+    text-align: center;
+    display: grid;
+    place-content: center;
+}
+
+.container{
+    margin-bottom: 10px;
+}
+
+.container div{
+    margin-top: 10px;
+   background:#121212;
+   padding: 15px;
+   border-radius: 7px;
+   transition: 0.4s ease;
+
+   display: grid;
+   grid-template-columns: 0.95fr 0.05fr;
+   align-items: center;
+}
+
+.container div:hover{
+   
+   background:#eaeaea50;
+  
+}

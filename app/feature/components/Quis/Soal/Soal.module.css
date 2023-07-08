@@ -1,0 +1,56 @@
+@media only screen and (min-width: 1050px) {
+   
+}
+
+.layout{
+    display: grid;
+    grid-template-columns: 0.07fr 0.93fr;
+    user-select: none;
+}
+
+.no{
+    text-align: center;
+}
+
+.soal, .no{
+     padding: 10px 0;
+}
+
+.opsi__block{
+    display: block;
+    
+}
+
+.opsi__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ContainedQuis, .QuisResult{
+    margin: auto;
+    margin-top: 10px ;
+    margin-bottom: 10px;
+    background: #121212;
+    width: 50vw;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.QuisResult{
+    display: grid;
+    text-align: center;
+    margin-top: 30px ;
+    margin-bottom: 30px;
+    background: #eaeaea;
+    color:#121212;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1050px) {
+  .ContainedQuis{
+   
+    width: 95vw;
+  
+}
+}

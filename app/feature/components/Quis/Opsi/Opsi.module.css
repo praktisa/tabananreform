@@ -1,0 +1,29 @@
+.layout{
+    display: grid;
+    margin-top: 5px;
+    
+}
+
+.layout label{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    transition: 0.4s ease;
+    display: grid;
+    grid-template-columns: 0.05fr 0.95fr;
+}
+
+.layout label:hover{
+   background: #eaeaea40;
+    
+}
+
+.layout input[type='radio']{
+    visibility: hidden;
+    height: 0;
+}
+
+.layout input[type='radio']:checked ~ label{
+    background: #e74c3c;
+}   
+
