@@ -13,7 +13,7 @@ interface dummy_inter {
 export default function Quis({ data, no, kunci = false }: dummy_inter) {
 
     let dummyOpsi = ["A", "B", "C", "D", "E"]
-    // console.log("DATAA", data)
+    console.log("DATAA", data)
 
     return (
         <>
@@ -46,6 +46,20 @@ export default function Quis({ data, no, kunci = false }: dummy_inter) {
                         }
                     })
                 }
+
+                {
+                    data.pembahasan
+                        ?
+                        <div>
+                            <h3 style={{ margin: "10px 0" }} >Pembahasan</h3>
+                            <p style={{ whiteSpace: "pre-line", background: "#25D36650", padding: "15px", borderRadius: "7px" }} >
+                                {data.pembahasan}
+                            </p>
+                        </div>
+                        :
+                        <></>
+                }
+
             </Soal>
 
         </>
