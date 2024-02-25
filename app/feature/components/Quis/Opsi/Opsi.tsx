@@ -8,41 +8,48 @@ interface Opsi__Inter {
     name: string,
     abc: string,
     k: boolean,
-
+    kunci: boolean
 }
 
-export default function Opsi({ idSoal, opsi, name, abc, k }: Opsi__Inter) {
+export default function Opsi({ idSoal, opsi, name, abc, k, kunci }: Opsi__Inter) {
 
     const Check = useRef<null | HTMLInputElement>(null)
 
     // review buatkan array Opsi harusnya dibungkus dengan div yang engandung useRef
-    function SetCheck(idSoal: string, id: string) {
+    function SetCheck(idSoal: string, id: string, kunci: boolean) {
 
-        if (Check.current != undefined) {
-            let Opsi = document.querySelectorAll('[name="' + idSoal + '"]')
+        if (kunci === false) {
+            if (Check.current != undefined) {
+                let Opsi = document.querySelectorAll('[name="' + idSoal + '"]')
 
-            // console.log("OPSI", Opsi)
+                // console.log("OPSI", Opsi)
 
-            for (var i = 0; i < Opsi.length; i++) {
+                for (var i = 0; i < Opsi.length; i++) {
 
-                if (Opsi[i].id === id) {
-                    Opsi[i].setAttribute('checked', "true")
-                }
-                else {
-                    Opsi[i].setAttribute('checked', "false")
+                    if (Opsi[i].id === id) {
+                        Opsi[i].setAttribute('checked', "true")
+                    }
+                    else {
+                        Opsi[i].setAttribute('checked', "false")
+                    }
                 }
             }
+            if (Check.current != undefined) {
+                Check.current.checked = true
+            }
         }
-        if (Check.current != undefined) {
-            Check.current.checked = true
-        }
+
     }
 
 
     return (
         <>
             <div className={O['layout']}>
-                <input onChange={() => SetCheck(idSoal, abc + idSoal)} type="radio" id={abc + idSoal} ref={Check} name={idSoal} value={opsi} />
+                <input
+                    // disabled={kunci}
+                    onChange={() => SetCheck(idSoal, abc + idSoal, kunci)}
+
+                    type="radio" id={kunci === false ? abc + idSoal : "X"} ref={Check} name={idSoal} value={opsi} />
                 <label
                     style={k === true ? { background: "#25D366", color: "#121212", fontWeight: "bold" } : {}}
                     htmlFor={abc + idSoal}

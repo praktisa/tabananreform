@@ -55,7 +55,7 @@ export default function Probis({ params }: { params: { Probis: string } }) {
                 ref={Domjawaban}
             >
                 {
-                    SOAL.map((dataso, i) => {
+                    SOAL.map((dataso: any, i) => {
                         return (
                             <Fragment key={i + dataso.key}>
                                 <ContainedQuis>

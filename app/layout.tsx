@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Reform 908',
-  description: 'Aplikasi Latihan Soal Olimpiade PSIAP',
+  title: 'UKT 908',
+  description: 'Aplikasi Latihan Soal UKT 2024',
 }
 
 
@@ -23,7 +23,7 @@ export default function RootLayout({
           textAlign: "center",
           padding: "10px 0"
         }}>
-          <h2>Latihan Olimpiade PSIAP 908</h2></div>
+          <h2>Latihan UKT Tabanan 2024</h2></div>
         {children}
       </body>
     </html>

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 interface Nav__Inter {
@@ -9,12 +9,17 @@ interface Nav__Inter {
 
 export default function Nav({ href, display }: Nav__Inter) {
 
-    let Nilai: any = ""
+    // let Nilai: any = ""
+    const [Nilai, setNilai] = useState<string>("0")
 
-    if (typeof window !== 'undefined') {
-        Nilai = localStorage.getItem(href) === null
-            ? "0" : localStorage.getItem(href)
-    }
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            if (localStorage.getItem(href) !== null) {
+                setNilai((localStorage.getItem(href)?.replaceAll('"', "") as string))
+            }
+        }
+    }, [])
 
 
 
@@ -23,7 +28,7 @@ export default function Nav({ href, display }: Nav__Inter) {
             <Link href={href}>
                 <div >
                     {display}
-                    <span>{Nilai.replaceAll('"', "") + "%"}</span>
+                    <span>{Nilai + "%"}</span>
                 </div>
             </Link>
         </>

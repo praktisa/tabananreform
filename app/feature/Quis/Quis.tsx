@@ -39,7 +39,7 @@ export default function Quis({ data, no, kunci = false }: dummy_inter) {
                                         name={data.Soal}
                                         abc={dummyOpsi[i]}
                                         k={TampilkanKunci}
-
+                                        kunci={kunci}
                                     />
                                 </Fragment>
                             )
@@ -48,10 +48,10 @@ export default function Quis({ data, no, kunci = false }: dummy_inter) {
                 }
 
                 {
-                    data.pembahasan
+                    data.pembahasan && kunci === true
                         ?
                         <div>
-                            <h3 style={{ margin: "10px 0" }} >Pembahasan</h3>
+                            <h3 style={{ margin: "10px 0" }} >Kunci dan Pembahasan</h3>
                             <p style={{ whiteSpace: "pre-line", background: "#25D36650", padding: "15px", borderRadius: "7px" }} >
                                 {data.pembahasan}
                             </p>

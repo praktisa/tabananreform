@@ -6,25 +6,21 @@ import Nav from './Nav'
 export default function Navigation() {
 
     const Probis: string[] = [
-        "Visi Misi PSIAP",
-        "Registrasi",
-        "Pengelolaan SPT",
-        "Tax Account Management (TAM)",
-        "Pembayaran",
-        "Layanan - Administratif",
-        "Layanan - Edukasi",
-        "Layanan - Inquiry Complaint Suggestion Appreciation",
-        "Data Quality Management",
-        "Document Management System",
-        "Business Intelligence",
-        "Compliance Risk Management (CRM)",
-        "Penilaian",
-        //Pengawasan dan Ekstensifikasi
-        "Penagihan",
-        "Penegakan Hukum Pidana Pajak",
-        "Keberatan dan Banding",
-        "Non Keberatan",
-        "Manajemen Pengetahuan",
+        "Tryout UKOM Pelaksana",
+        "Tryout UKOM AR",
+        "AR",
+        "KUP",
+        "Pajak Penghasilan",
+        "Bea Materai",
+        "PPN",
+        "PBB",
+        "Tata Naskah Dinas",
+        "Organisasi",
+        "Internalisasi Kepatuhan",
+        "Keuangan",
+        "TIK",
+        "Kepegawaian",
+
     ]
 
     return (
