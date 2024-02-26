@@ -44,18 +44,23 @@ export default function Opsi({ idSoal, opsi, name, abc, k, kunci }: Opsi__Inter)
 
     return (
         <>
-            <div className={O['layout']}>
+            <div className={O['layout']} >
                 <input
-                    // disabled={kunci}
+
                     onChange={() => SetCheck(idSoal, abc + idSoal, kunci)}
-
-                    type="radio" id={kunci === false ? abc + idSoal : "X"} ref={Check} name={idSoal} value={opsi} />
+                    type="radio"
+                    id={kunci === false ? abc + idSoal : "X"}
+                    ref={Check}
+                    name={idSoal}
+                    value={opsi}
+                    data-answer={k}
+                    readOnly={kunci}
+                />
                 <label
+
                     style={k === true ? { background: "#25D366", color: "#121212", fontWeight: "bold" } : {}}
+
                     htmlFor={abc + idSoal}
-
-                // onClick={(Check.current) => SetCheck(Check.current)}
-
                 >
                     <span>{abc}.</span> {opsi}</label>
             </div>

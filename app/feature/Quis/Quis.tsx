@@ -22,12 +22,14 @@ export default function Quis({ data, no, kunci = false }: dummy_inter) {
                     data.o.split('(xx)').map((opsi: any, i: number) => {
                         if (opsi != "") {
 
-                            let TampilkanKunci = kunci === true
-                                ? data.jawaban === opsi ?
-                                    true
-                                    :
-                                    false
-                                : false
+                            let TampilkanKunci =
+                                kunci === true
+                                    ?
+                                    data.jawaban === opsi ?
+                                        true
+                                        :
+                                        false
+                                    : false
 
 
 
@@ -53,6 +55,9 @@ export default function Quis({ data, no, kunci = false }: dummy_inter) {
                         <div>
                             <h3 style={{ margin: "10px 0" }} >Kunci dan Pembahasan</h3>
                             <p style={{ whiteSpace: "pre-line", background: "#25D36650", padding: "15px", borderRadius: "7px" }} >
+                                <b>Kunci:</b> {data.jawaban}  <br />
+                                <br />
+                                Pembahasan: <br />
                                 {data.pembahasan}
                             </p>
                         </div>

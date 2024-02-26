@@ -19,7 +19,7 @@ export default function Page() {
                 },
                 method: "POST",
                 body: JSON_Data,
-            })
+            }).then(() => { setLoad(false) })
         } catch (error) {
             console.log("ERROR", error)
         }
@@ -37,7 +37,7 @@ export default function Page() {
                     <div style={{ textAlign: "center", padding: "10px 0" }}
                         onClick={() => { Load === false ? Simpan(Data) : null }}
                     >
-                        Simpan Data
+                        {Load === true ? "Menyimpan" : "Simpan Data"}
                     </div>
                     :
                     <></>

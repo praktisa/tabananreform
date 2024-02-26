@@ -8,10 +8,11 @@ export default function Navigation() {
     const Probis: string[] = [
         "Tryout UKOM Pelaksana",
         "Tryout UKOM AR",
+        "Bea Materai",
+
         "AR",
         "KUP",
         "Pajak Penghasilan",
-        "Bea Materai",
         "PPN",
         "PBB",
         "Tata Naskah Dinas",

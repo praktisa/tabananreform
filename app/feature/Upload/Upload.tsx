@@ -24,7 +24,7 @@ export default function Upload({ setState }: any) {
                 delete x['d']
                 delete x['e']
                 Object.assign(x, { o: opsi })
-                console.log("OPSI", x)
+                // console.log("OPSI", x)
                 Returned.push(x)
             }
 
