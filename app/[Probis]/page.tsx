@@ -49,8 +49,11 @@ export default function Probis({ params }: { params: { Probis: string } }) {
         console.log("HasilAkhir", HasilAkhir)
     }
 
+    console.log("SOAL", SOAL)
+
     return (
         <>
+            <h3 style={{ textAlign: "center" }} >{SOAL[0]['topik']}</h3>
             <div
                 ref={Domjawaban}
                 style={{ marginBottom: "150px" }}
