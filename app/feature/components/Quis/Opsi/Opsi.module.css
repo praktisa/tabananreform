@@ -40,6 +40,15 @@
     )::after{
     content: "🙂 Jawaban anda di atas Kurang Tepat";
     padding: 10px 5px;
+   
+}   
+
+.layout:is(
+    :has(input[readonly])
+    :has(input[data-answer='false']:checked)
+    ){
+    opacity: 0.8;
+   
 }   
 
 .layout:has(input[data-answer='false']:not(:checked))
