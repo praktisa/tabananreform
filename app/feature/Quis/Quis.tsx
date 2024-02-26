@@ -52,7 +52,7 @@ export default function Quis({ data, no, kunci = false }: dummy_inter) {
                 {
                     data.pembahasan && kunci === true
                         ?
-                        <div>
+                        <div >
                             <h3 style={{ margin: "10px 0" }} >Kunci dan Pembahasan</h3>
                             <p style={{ whiteSpace: "pre-line", background: "#25D36650", padding: "15px", borderRadius: "7px" }} >
                                 <b>Kunci:</b> {data.jawaban}  <br />

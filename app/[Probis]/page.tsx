@@ -53,6 +53,7 @@ export default function Probis({ params }: { params: { Probis: string } }) {
         <>
             <div
                 ref={Domjawaban}
+                style={{ marginBottom: "150px" }}
             >
                 {
                     SOAL.map((dataso: any, i) => {
@@ -66,42 +67,46 @@ export default function Probis({ params }: { params: { Probis: string } }) {
                     })
 
                 }
+
+
+                {
+                    reveal === true
+                        ?
+                        <>
+                            <div style={
+                                {
+                                    display: "grid", background: "#eaeaea", color: "#121212"
+                                    , textAlign: "center", fontWeight: "bold", padding: "10px",
+                                    position: "fixed", bottom: "0", width: "100%", border: "2px solid #444"
+                                }
+                            }>
+                                <div>Nilai: {nilai}/{SOAL.length}</div>
+                                <Link href={"/"}>Kembali</Link>
+                            </div>
+
+                        </>
+                        :
+                        <>
+                            {
+                                SOAL.length === 0
+                                    ?
+                                    <>
+                                        <div style={{ display: "grid", textAlign: "center" }} >
+                                            <h1 >Soal {params.Probis} belum tersedia</h1>
+                                            <Link href={"/"}>Kembali</Link>
+                                        </div>
+
+                                    </>
+
+                                    :
+                                    <QuisResult Parser={() => ParserDOM(Domjawaban.current?.innerHTML, SOAL)} />
+                            }
+                        </>
+
+                }
             </div>
 
-            {
-                reveal === true
-                    ?
-                    <>
-                        <div style={
-                            {
-                                display: "grid", background: "#eaeaea", color: "#121212"
-                                , textAlign: "center", fontWeight: "bold", padding: "10px"
-                            }
-                        }>
-                            <div>Nilai: {nilai}/{SOAL.length}</div>
-                            <Link href={"/"}>Kembali</Link>
-                        </div>
 
-                    </>
-                    :
-                    <>
-                        {
-                            SOAL.length === 0
-                                ?
-                                <>
-                                    <div style={{ display: "grid", textAlign: "center" }} >
-                                        <h1 >Soal {params.Probis} belum tersedia</h1>
-                                        <Link href={"/"}>Kembali</Link>
-                                    </div>
-
-                                </>
-
-                                :
-                                <QuisResult Parser={() => ParserDOM(Domjawaban.current?.innerHTML, SOAL)} />
-                        }
-                    </>
-
-            }
 
 
 
