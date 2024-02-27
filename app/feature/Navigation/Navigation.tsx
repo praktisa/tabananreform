@@ -6,10 +6,10 @@ import Nav from './Nav'
 export default function Navigation() {
 
     const Probis: string[] = [
+        "Kisi Kisi 1",
         "Tryout UKOM Pelaksana",
         "Tryout UKOM AR",
         "Bea Materai",
-
         "AR",
         "KUP",
         "Pajak Penghasilan",
