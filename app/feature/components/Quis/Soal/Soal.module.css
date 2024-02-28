@@ -15,6 +15,7 @@
 
 .soal, .no{
      padding: 10px 0;
+     white-space:pre-line;
 }
 
 .opsi__block{

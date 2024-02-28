@@ -7,20 +7,21 @@ export default function Navigation() {
 
     const Probis: string[] = [
         "Kisi Kisi 1",
+        "Kisi Kisi 2",
         "Tryout UKOM Pelaksana",
         "Tryout UKOM AR",
         "Bea Materai",
-        "AR",
-        "KUP",
-        "Pajak Penghasilan",
-        "PPN",
-        "PBB",
-        "Tata Naskah Dinas",
-        "Organisasi",
-        "Internalisasi Kepatuhan",
-        "Keuangan",
-        "TIK",
-        "Kepegawaian",
+        // "AR",
+        // "KUP",
+        // "Pajak Penghasilan",
+        // "PPN",
+        // "PBB",
+        // "Tata Naskah Dinas",
+        // "Organisasi",
+        // "Internalisasi Kepatuhan",
+        // "Keuangan",
+        // "TIK",
+        // "Kepegawaian",
 
     ]
 
