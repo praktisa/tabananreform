@@ -8,6 +8,7 @@ export default function Navigation() {
     const Probis: string[] = [
         "Kisi Kisi 1",
         "Kisi Kisi 2",
+        "Kisi Kisi 3",
         "Tryout UKOM Pelaksana",
         "Tryout UKOM AR",
         "Bea Materai",

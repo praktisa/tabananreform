@@ -23,7 +23,7 @@ export default function RootLayout({
           textAlign: "center",
           padding: "10px 0"
         }}>
-          <h2>Latihan UKT Tabanan 2024</h2></div>
+          <h2>Latihan UKT Tabanan</h2></div>
         {children}
       </body>
     </html>
