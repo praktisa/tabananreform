@@ -5,14 +5,21 @@ import { ContainedQuis, QuisResult } from '../feature/components/Quis/Soal/Soal'
 import Quis from '../feature/Quis/Quis'
 import Link from 'next/link'
 
-export default function Probis({ params }: { params: { Probis?: any } }) {
+interface PARAM {
+    params: string
+
+}
+
+type Probis_interface = { Probis: string, params: string };
+
+export default function Probis({ params }: PARAM) {
 
     // console.log("so", so, params.Probis)
 
     const [reveal, setReveal] = useState(false)
     const [nilai, setNilai] = useState(0)
 
-    const { Probis } = React.use(params)
+    const { Probis } = React.use(params) as Probis_interface
 
     let SOAL = so.filter((x: any) => x.key === Probis)
 
