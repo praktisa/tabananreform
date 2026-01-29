@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'UKT 908',
-  description: 'Aplikasi Latihan Soal UKT 2024',
+  description: 'Aplikasi Latihan Soal UKT',
 }
 
 
