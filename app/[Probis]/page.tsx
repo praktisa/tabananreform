@@ -1,18 +1,22 @@
 'use client'
-import React, { Fragment, HtmlHTMLAttributes, useRef, useState } from 'react'
+import React, { Fragment, HtmlHTMLAttributes, useRef, useState, use } from 'react'
 import so from '../Admin/_data/soal.json'
 import { ContainedQuis, QuisResult } from '../feature/components/Quis/Soal/Soal'
 import Quis from '../feature/Quis/Quis'
 import Link from 'next/link'
 
-export default function Probis({ params }: { params: { Probis: string } }) {
+export default function Probis({ params }: { params: { Probis?: any } }) {
 
     // console.log("so", so, params.Probis)
 
     const [reveal, setReveal] = useState(false)
     const [nilai, setNilai] = useState(0)
 
-    let SOAL = so.filter((x: any) => x.key === params.Probis)
+    const { Probis } = React.use(params)
+
+    let SOAL = so.filter((x: any) => x.key === Probis)
+
+
 
     const Domjawaban = useRef<null | HTMLDivElement>(null)
 
@@ -31,8 +35,11 @@ export default function Probis({ params }: { params: { Probis: string } }) {
 
             let IndeksSoal = SOAL.findIndex((key: any) => key.No === JawabanTerpilih[i]['name'])
 
-            let K = SOAL[IndeksSoal].jawaban.replace(/(\r\n|\n|\r)/gm, "")
-            let P = JawabanTerpilih[i]['value'].replace(/(\r\n|\n|\r)/gm, "")
+            let K = SOAL[IndeksSoal].jawaban.replace(/(\r\n|\n|\r)/gm, "").trim()
+            let P = JawabanTerpilih[i]['value'].replace(/(\r\n|\n|\r)/gm, "").trim()
+
+            // let K = SOAL[IndeksSoal].jawaban.trim()
+            // let P = JawabanTerpilih[i]['value'].trim()
 
             if (IndeksSoal > -1 && K === P) {
                 HasilAkhir += 1
@@ -44,7 +51,7 @@ export default function Probis({ params }: { params: { Probis: string } }) {
         }
 
         setNilai(HasilAkhir)
-        localStorage.setItem(params.Probis, JSON.stringify((HasilAkhir * 100 / SOAL.length).toFixed(0)))
+        localStorage.setItem(Probis, JSON.stringify((HasilAkhir * 100 / SOAL.length).toFixed(0)))
 
         console.log("HasilAkhir", HasilAkhir)
     }
@@ -95,7 +102,7 @@ export default function Probis({ params }: { params: { Probis: string } }) {
                                     ?
                                     <>
                                         <div style={{ display: "grid", textAlign: "center" }} >
-                                            <h1 >Soal {params.Probis} belum tersedia</h1>
+                                            <h1 >Soal {Probis} belum tersedia</h1>
                                             <Link href={"/"}>Kembali</Link>
                                         </div>
 

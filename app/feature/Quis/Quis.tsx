@@ -25,7 +25,7 @@ export default function Quis({ data, no, kunci = false }: dummy_inter) {
                             let TampilkanKunci =
                                 kunci === true
                                     ?
-                                    data.jawaban === opsi ?
+                                    data.jawaban.trim() === opsi.trim() ?
                                         true
                                         :
                                         false
