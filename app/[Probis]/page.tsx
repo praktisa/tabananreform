@@ -1,12 +1,12 @@
 'use client'
-import React, { Fragment, HtmlHTMLAttributes, useRef, useState, use } from 'react'
+import React, { Fragment, HtmlHTMLAttributes, useRef, useState, use, Usable } from 'react'
 import so from '../Admin/_data/soal.json'
 import { ContainedQuis, QuisResult } from '../feature/components/Quis/Soal/Soal'
 import Quis from '../feature/Quis/Quis'
 import Link from 'next/link'
 
 interface PARAM {
-    params: string
+    params: Usable<string>
 
 }
 
@@ -19,7 +19,7 @@ export default function Probis({ params }: PARAM) {
     const [reveal, setReveal] = useState(false)
     const [nilai, setNilai] = useState(0)
 
-    const { Probis } = React.use(params) as Probis_interface
+    const { Probis } = React.use(params) as any
 
     let SOAL = so.filter((x: any) => x.key === Probis)
 
