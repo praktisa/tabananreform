@@ -9,7 +9,7 @@ export default function Navigation() {
         "Tryout UKOM Pelaksana 1",
         "Tryout UKOM Pelaksana 2",
         "Tryout UKOM Pelaksana 3",
-        "Tryout UKOM Pelaksana 4",
+        "Tryout UKOM Pelaksana IV",
         "Tryout UKOM Pelaksana 5",
         "Tryout UKOM Pelaksana 6",
         "Tryout UKOM Pelaksana 7",
